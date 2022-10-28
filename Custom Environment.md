@@ -134,6 +134,14 @@ cd AirSim/Unreal/Environments/CityParkEnvironmentCollec
 
 ```
 
+- Add this line to "Config/DefaultGame.ini"
+
+```
++MapsToCook=(FilePath="/AirSim/AirSimAssets")
+```
+
+<br>
+
 - Navigate to Unreal Engine and open the editor. 
 - Open the .uproject file as described above.
 - After quite some time, the project should open and look like this:
