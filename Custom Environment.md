@@ -6,7 +6,6 @@
 
 <br>
 
-- This is just me figuring out stuff as I go.
 - The stuff is mostly straight out of the [documentation](https://github.com/microsoft/AirSim/blob/main/docs/unreal_custenv.md), but with minor tweaks needed for my system.
 
 <br>
@@ -122,7 +121,15 @@ More > Browse > ProjectName.uproject
 
 <br>
 
-- [This issue](https://github.com/microsoft/AirSim/issues/4535#issuecomment-1136095046) is where I got the answer from.
+- Add this line to "Config/DefaultGame.ini"
+
+```
++MapsToCook=(FilePath="/AirSim/AirSimAssets")
+```
+
+<br>
+
+- [This issue](https://github.com/microsoft/AirSim/issues/4535#issuecomment-1136095046) helped quite a bit.
 - Assuming the first 4 steps were followed from this answer, run
 
 ```
@@ -133,14 +140,6 @@ cd AirSim/Unreal/Environments/CityParkEnvironmentCollec
 ~/UnrealEngine/Engine/Binaries/ThirdParty/Mono/Linux/bin/mono ~/UnrealEngine/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Linux -Project=/home/rohan/AirSim/Unreal/Environments/CityParkEnvironmentCollec/CityParkEnvironmentCollec.uproject -TargetType=Editor -Progress
 
 ```
-
-- Add this line to "Config/DefaultGame.ini"
-
-```
-+MapsToCook=(FilePath="/AirSim/AirSimAssets")
-```
-
-<br>
 
 - Navigate to Unreal Engine and open the editor. 
 - Open the .uproject file as described above.
